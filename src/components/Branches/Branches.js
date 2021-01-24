@@ -261,7 +261,6 @@ export default function Branches() {
                     <Table className={classes.table} aria-label="customized table">
                         <TableHead>
                         <TableRow>
-                            <StyledTableCell>Bank Name</StyledTableCell>
                             <StyledTableCell>Branch Name</StyledTableCell>
                             <StyledTableCell>IFSC</StyledTableCell>
                             <StyledTableCell>CITY</StyledTableCell>
@@ -285,9 +284,6 @@ export default function Branches() {
                                     return (
 
                                         <TableRow key={row.ifsc}>
-                                        <StyledTableCell component="th" scope="row">
-                                            {row.bank_name}
-                                        </StyledTableCell>
                                         <StyledTableCell>{row.branch}</StyledTableCell>
                                         <StyledTableCell>{row.ifsc}</StyledTableCell>
                                         <StyledTableCell>{row.city}</StyledTableCell>
