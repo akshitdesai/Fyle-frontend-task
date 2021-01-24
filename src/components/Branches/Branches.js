@@ -81,7 +81,7 @@ export default function Branches() {
             setisLoading(false);
         })
         
-    }, [currentPage,page_size,city, isFav]);
+    }, [currentPage,page_size,city]);
 
     function handleChange(event){
         event.preventDefault();
