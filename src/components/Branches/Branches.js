@@ -70,10 +70,9 @@ export default function Branches() {
         setisLoading(true);
         let offset=(currentPage-1)*page_size
         fetch(`https://bankofindia-backend.herokuapp.com/api/branches?q=${city}&limit=${page_size}&offset=${offset}`).then((res) => {
-
             return res.json();
         }).then((res) => {
-            setData(res);
+            setData(res.branches);
 
             for(let i=0;i<localStorage.length;i++)
                 isFav[localStorage.key(i)]=true;
