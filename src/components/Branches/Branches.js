@@ -69,7 +69,7 @@ export default function Branches() {
     useEffect(() => {
         setisLoading(true);
         let offset=(currentPage-1)*page_size
-        fetch(`https://bankofindia-backend.herokuapp.com/api/branches?q=${city}&limit=${page_size}&offset=${offset}`).then((res) => {
+        fetch(`http://cors-anywhere.herokuapp.com/https://bankofindia-backend.herokuapp.com/api/branches?q=${city}&limit=${page_size}&offset=${offset}`).then((res) => {
 
             return res.json();
         }).then((res) => {
